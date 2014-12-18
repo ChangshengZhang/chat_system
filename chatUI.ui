@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>712</width>
+    <height>663</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>511</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>440</y>
+      <width>511</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>560</y>
+      <width>89</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>560</y>
+      <width>89</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionTranFile"/>
+   <addaction name="actionExpression"/>
+   <addaction name="actionVideo"/>
+   <addaction name="actionVoice"/>
+   <addaction name="actionShake"/>
+   <addaction name="actionHistory"/>
+  </widget>
+  <action name="actionTranFile">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>传输文件</string>
+   </property>
+   <property name="toolTip">
+    <string>传输文件</string>
+   </property>
+  </action>
+  <action name="actionExpression">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/f118.png</normaloff>icons/f118.png</iconset>
+   </property>
+   <property name="text">
+    <string>动态表情</string>
+   </property>
+   <property name="toolTip">
+    <string>动态表情</string>
+   </property>
+  </action>
+  <action name="actionVideo">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/web_camera.png</normaloff>icons/web_camera.png</iconset>
+   </property>
+   <property name="text">
+    <string>视频聊天</string>
+   </property>
+   <property name="toolTip">
+    <string>视频聊天</string>
+   </property>
+  </action>
+  <action name="actionVoice">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/voicedialer.png</normaloff>icons/voicedialer.png</iconset>
+   </property>
+   <property name="text">
+    <string>语音聊天</string>
+   </property>
+   <property name="toolTip">
+    <string>语音聊天</string>
+   </property>
+  </action>
+  <action name="actionShake">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/ringtone.png</normaloff>icons/ringtone.png</iconset>
+   </property>
+   <property name="text">
+    <string>窗口振动</string>
+   </property>
+   <property name="toolTip">
+    <string>窗口振动</string>
+   </property>
+  </action>
+  <action name="actionHistory">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/bubbles.png</normaloff>icons/bubbles.png</iconset>
+   </property>
+   <property name="text">
+    <string>聊天记录</string>
+   </property>
+   <property name="toolTip">
+    <string>聊天记录</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
