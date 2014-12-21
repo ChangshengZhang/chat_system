@@ -4,10 +4,12 @@
 # Module        :chatUI.py
 # Description   :聊天界面设计
 # Author        :Changsheng Zhang 
-# Last edited   :2014/12/19 00:56
+# Last edited   :2014/12/22 02:56
+
+
 # Form implementation generated from reading ui file 'chatUI.ui'
 #
-# Created: Fri Dec 19 00:56:05 2014
+# Created: Mon Dec 22 02:15:32 2014
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -30,7 +32,6 @@ except AttributeError:
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        # 页面布局
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(712, 663)
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -91,17 +92,9 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionShake)
         self.toolBar.addAction(self.actionHistory)
 
-        # 信号槽
-        # 关闭和发送
-        self.pushButton_2.clicked.connect(self.closeEvent)
-
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        
-    def closeEvent(self, event):
-        exit()
 
-        
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.pushButton_2.setText(_translate("MainWindow", "关闭", None))
@@ -119,14 +112,4 @@ class Ui_MainWindow(object):
         self.actionShake.setToolTip(_translate("MainWindow", "窗口振动", None))
         self.actionHistory.setText(_translate("MainWindow", "聊天记录", None))
         self.actionHistory.setToolTip(_translate("MainWindow", "聊天记录", None))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
 

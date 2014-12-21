@@ -8,7 +8,7 @@
 
 from PyQt4 import QtGui
 from PyQt4 import QtCore
-import cv2
+import userUI  
 #from time import clock
 
 class LoginDialog(QtGui.QDialog):
@@ -135,7 +135,7 @@ class LoginDialog(QtGui.QDialog):
 
 
     def login(self):
-        print 'login'
+        #print 'login'
         if str(self.leName.text()) == '2012011420' and str(self.lePassword.text()) == 'net2014':
             if self.remAccount.isChecked():
                 f1= open('log/cookies.youchat','w')
@@ -147,8 +147,10 @@ class LoginDialog(QtGui.QDialog):
             self.accept() # 关闭对话框并返回1
         else:
             QtGui.QMessageBox.critical(self, u'错误', u'用户名密码不匹配')
- 
- 
+
+    def getleName(self):
+        return str(self.leName.text())
+'''
 def login():
     """返回True或False"""
     dialog = LoginDialog()
@@ -156,11 +158,17 @@ def login():
         return True
     else:
         return False
- 
+''' 
 if __name__ == '__main__':
     import sys
     app = QtGui.QApplication(sys.argv)
-    if login():
-        mainWindow = QtGui.QMainWindow()
-        mainWindow.show()
+
+    dialog = LoginDialog()
+
+    if dialog.exec_():
+        userName = dialog.getleName()
+        MainWindow = QtGui.QMainWindow()
+        ui = userUI.Ui_MainWindow()
+        ui.setupUi(MainWindow,userName)
+        MainWindow.show()
         sys.exit(app.exec_())
