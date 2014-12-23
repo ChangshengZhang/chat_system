@@ -8,7 +8,7 @@
 
 from PyQt4 import QtGui
 from PyQt4 import QtCore
-import userUI  
+import userMainWindow  
 #from time import clock
 
 class LoginDialog(QtGui.QDialog):
@@ -167,8 +167,9 @@ if __name__ == '__main__':
 
     if dialog.exec_():
         userName = dialog.getleName()
-        MainWindow = QtGui.QMainWindow()
-        ui = userUI.Ui_MainWindow()
-        ui.setupUi(MainWindow,userName)
-        MainWindow.show()
+        #MainWindow = QtGui.QMainWindow()
+        ui = userMainWindow.UserMainWindow()
+        #ui.setupUi(MainWindow,userName)
+        #MainWindow.show()
+        ui.show()
         sys.exit(app.exec_())

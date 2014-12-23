@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>357</width>
+    <height>616</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>请选择群聊好友</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="listWidgetFriend">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>341</width>
+      <height>481</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCancel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>540</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonEnter">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>540</y>
+      <width>93</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确定</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

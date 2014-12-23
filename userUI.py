@@ -1,27 +1,19 @@
-#! C:/Program Files (x86)/Python27
 # -*- coding: utf-8 -*-
-# Project       :计网大作业
-# Module        :userUI.py
-# Description   :用户主界面设计
-# Author        :Changsheng Zhang 
-# Last edited   :2014/12/19 2:24
+
 # Form implementation generated from reading ui file 'userUI.ui'
 #
-# Created: Fri Dec 19 02:24:20 2014
+# Created: Tue Dec 23 22:12:55 2014
 #      by: PyQt4 UI code generator 4.11.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-import loginUI
-import infoUI
-
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
     def _fromUtf8(s):
-        return s+-8
+        return s
 
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
@@ -32,7 +24,7 @@ except AttributeError:
         return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_MainWindow(object):
-    def setupUi(self, MainWindow,userName):
+    def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(357, 667)
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -91,12 +83,11 @@ class Ui_MainWindow(object):
         self.menuBar.addAction(self.menuAccount.menuAction())
         self.menuBar.addAction(self.menuHelp.menuAction())
 
-        self.retranslateUi(MainWindow,userName)
+        self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        self.setSlots(MainWindow)
 
-    def retranslateUi(self, MainWindow,userName):
-        MainWindow.setWindowTitle(_translate("MainWindow", userName, None))
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.searchUserName.setText(_translate("MainWindow", "查找", None))
         self.pushButtonGroupChat.setText(_translate("MainWindow", "发起群聊", None))
         self.pushButtonRefresh.setText(_translate("MainWindow", "刷新好友", None))
@@ -117,51 +108,4 @@ class Ui_MainWindow(object):
         self.actionAuthor.setShortcut(_translate("MainWindow", "Ctrl+A", None))
         self.actionUseHelp.setText(_translate("MainWindow", "使用说明", None))
         self.actionUseHelp.setShortcut(_translate("MainWindow", "F1", None))
-    
-    def setSlots(self,MainWindow):
-        self.actionSwitchAccount.connect(self.actionSwitchAccount,QtCore.SIGNAL("triggered()"),self.switchAccount)
-        self.actionQuit.connect(self.actionQuit,QtCore.SIGNAL("triggered()"),self.closeWindow)
-        self.actionAuthor.connect(self.actionAuthor,QtCore.SIGNAL("triggered()"),self.aboutAuthor)
-        self.actionYouchat.connect(self.actionYouchat,QtCore.SIGNAL("triggered()"),self.aboutYouChat)
-        self.actionUpdate.connect(self.actionUpdate,QtCore.SIGNAL("triggered()"),self.aboutUpdate)
-        self.actionUseHelp.connect(self.actionUseHelp,QtCore.SIGNAL("triggered()"),self.aboutUsehelp)
-
-    def closeWindow(self):
-        exit()
-    
-    def aboutAuthor(self):
-        #print a
-        #self.label.setText()
-        dialog = infoUI.AboutAuthor()
-        dialog.exec_()
-    def aboutUpdate(self):
-        dialog = infoUI.AboutUpdate()
-        dialog.exec_()
-
-    def aboutYouChat(self):
-        dialog = infoUI.AboutYouChat()
-        dialog.exec_()    
-
-    def aboutUsehelp(self):
-        dialog = infoUI.UserHelp()
-        dialog.exec_()
-
-    def switchAccount(self):
-        #print "haha"
-        #exit()
-        dialog = loginUI.LoginDialog()
-        dialog.exec_()
-    
-
-    
-    
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow,"2012011420")
-    MainWindow.show()
-    sys.exit(app.exec_())
 

@@ -61,13 +61,15 @@ class UserHelp(QtGui.QDialog):
 		self.resize(400,300)
 
 		self.textEdit = QtGui.QTextBrowser()
-		self.textEdit.setText(u"支持功能：\n ")
+		self.textEdit.setText(u"支持功能：\n1. 双击好友进行聊天；\n2. 发起群聊时，双击选择好友，按确定开始群聊； ")
 
 		layout =QtGui.QVBoxLayout()
 
 		layout.addWidget(self.textEdit)
 
 		self.setLayout(layout)
+
+
 
 
 if __name__=='__main__':

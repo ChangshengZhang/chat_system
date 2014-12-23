@@ -29,6 +29,7 @@ class ChatWindow(QtGui.QMainWindow):
 		#待完善
 		if path :
 			print path 
+			
 
 	@QtCore.pyqtSlot()
 	def on_actionExpression_triggered(self):
