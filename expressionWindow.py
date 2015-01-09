@@ -15,192 +15,229 @@ class ExpressionWindow(QtGui.QDialog):
 		QtGui.QDialog.__init__(self)
 		self.ui = expression.Ui_Dialog()
 		self.ui.setupUi(self)
-		self.chosenEmotion = 0
+		self.chosenEmotion = ""
 		#self.Emotion =0
+		self.emotionSignal = QtCore.SIGNAL("emotionSignal")
 	@QtCore.pyqtSlot()
 	def on_pushButton_01_clicked(self):
-		self.chosenEmotion =1
+		self.chosenEmotion ="01"
 		#print self.chosenEmotion
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_02_clicked(self):
 		#print 2
-		self.chosenEmotion =2
+		self.chosenEmotion ="02"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_03_clicked(self):
-		self.chosenEmotion =3
+		self.chosenEmotion ="03"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_04_clicked(self):
-		self.chosenEmotion =4
+		self.chosenEmotion ="04"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_05_clicked(self):
-		self.chosenEmotion =5
+		self.chosenEmotion ="05"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_06_clicked(self):
-		self.chosenEmotion =6
+		self.chosenEmotion ="06"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_07_clicked(self):
-		self.chosenEmotion =7
+		self.chosenEmotion ="07"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_08_clicked(self):
-		self.chosenEmotion =8
+		self.chosenEmotion ="08"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_09_clicked(self):
-		self.chosenEmotion =9
+		self.chosenEmotion ="09"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_10_clicked(self):
-		self.chosenEmotion =10
+		self.chosenEmotion ="10"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_11_clicked(self):
-		self.chosenEmotion =11
+		self.chosenEmotion ="11"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_12_clicked(self):
-		self.chosenEmotion =12
+		self.chosenEmotion ="12"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_13_clicked(self):
-		self.chosenEmotion =13
+		self.chosenEmotion ="13"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_14_clicked(self):
-		self.chosenEmotion =14
+		self.chosenEmotion ="14"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_15_clicked(self):
-		self.chosenEmotion =15
+		self.chosenEmotion ="15"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_16_clicked(self):
-		self.chosenEmotion =16
+		self.chosenEmotion ="16"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_17_clicked(self):
-		self.chosenEmotion =17
+		self.chosenEmotion ="17"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_18_clicked(self):
-		self.chosenEmotion =18
+		self.chosenEmotion ="18"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_19_clicked(self):
-		self.chosenEmotion =19
+		self.chosenEmotion ="19"
 		self.sendEmotion(self.chosenEmotion)
-	
+		self.close()
+
 	@QtCore.pyqtSlot()
 	def on_pushButton_20_clicked(self):
-		self.chosenEmotion =20
+		self.chosenEmotion ="20"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_21_clicked(self):
-		self.chosenEmotion =21
+		self.chosenEmotion ="21"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	@QtCore.pyqtSlot()
 	def on_pushButton_22_clicked(self):
-		self.chosenEmotion =22
+		self.chosenEmotion ="22"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_23_clicked(self):
-		self.chosenEmotion =23
+		self.chosenEmotion ="23"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_24_clicked(self):
-		self.chosenEmotion =24
+		self.chosenEmotion ="24"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_25_clicked(self):
-		self.chosenEmotion =25
+		self.chosenEmotion ="25"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_26_clicked(self):
-		self.chosenEmotion =26
+		self.chosenEmotion ="26"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_27_clicked(self):
-		self.chosenEmotion =27
+		self.chosenEmotion ="27"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	@QtCore.pyqtSlot()
 	def on_pushButton_28_clicked(self):
-		self.chosenEmotion =28
+		self.chosenEmotion ="28"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_29_clicked(self):
-		self.chosenEmotion =29
+		self.chosenEmotion ="29"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_30_clicked(self):
-		self.chosenEmotion =30
+		self.chosenEmotion ="30"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_31_clicked(self):
-		self.chosenEmotion =31
+		self.chosenEmotion ="31"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_32_clicked(self):
-		self.chosenEmotion =32
+		self.chosenEmotion ="32"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_33_clicked(self):
-		self.chosenEmotion =33
+		self.chosenEmotion ="33"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_34_clicked(self):
-		self.chosenEmotion =34
+		self.chosenEmotion ="34"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	@QtCore.pyqtSlot()
 	def on_pushButton_35_clicked(self):
-		self.chosenEmotion =35
+		self.chosenEmotion ="35"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 	
 	@QtCore.pyqtSlot()
 	def on_pushButton_36_clicked(self):
-		self.chosenEmotion =36
+		self.chosenEmotion ="36"
 		self.sendEmotion(self.chosenEmotion)
+		self.close()
 
 	#发送表情
 	def sendEmotion(self,chosenEmotion):
-		print chosenEmotion
-
+		#print chosenEmotion
+		self.emit(self.emotionSignal,chosenEmotion)
 		#待写
 
 

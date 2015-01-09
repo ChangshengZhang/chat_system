@@ -10,40 +10,45 @@ from PyQt4 import QtCore, QtGui
 from groupChatUI import Ui_MainWindow
 import sys
 import chatWindow
+import UISender
 
  
 class GroupChatChoose(QtGui.QMainWindow):
-    def __init__(self,parent = None):
+    def __init__(self,hostname,socket,parent = None):
         QtGui.QMainWindow.__init__(self)
         #QtGui.QWidget.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.socket =socket
+
+        #在线用户列表
+        self.friendList = []
 
         self.showFriendList()
 
         self.groupChatFriendChoose =[]
+
+        self.chatWindowName = ""
+
+        self.hostName =hostname
         
 
 
     def showFriendList(self):
         #读取在线用户列表
-        self.friendList = []
-        f = open('userList/friendList.youchat')
-        line = f.readline()
-        while line:
-            temp = line.split("\n")
-            self.friendList.append(temp[0])
-            line = f.readline()
+        friendInfo,friendNum = UISender.UISender.LoadFriend(self.socket)
+        del self.friendList[:]
 
-        f.close()
+        for i in friendInfo.keys():
+            self.friendList.append(str(friendInfo[i]))
         #显示用户
-        self.ui.listWidgetFriend.setSortingEnabled(1)
+        #self.ui.listWidgetFriend.setSortingEnabled(1)
         self.friendListItem = []
 
         j = 0
         for item in self.friendList:
             j = j+1
-            path ='icon/'+str(j%10)+'.png'
+            path ='icon/'+str(j%10+1)+'.png'
             self.friendListItem.append(QtGui.QListWidgetItem(QtGui.QIcon(path),item))
 
         for i in range(len(self.friendListItem)):
@@ -56,10 +61,13 @@ class GroupChatChoose(QtGui.QMainWindow):
         #print self.ui.listWidgetFriend.currentRow()
         self.groupChatFriendChoose.append(self.friendList[self.ui.listWidgetFriend.currentRow()])
         #print self.groupChatFriendChoose
-    
+        if len(self.groupChatFriendChoose)==1:
+            self.chatWindowName=self.friendList[self.ui.listWidgetFriend.currentRow()]
+        else:
+            self.chatWindowName=self.chatWindowName+"、"+self.friendList[self.ui.listWidgetFriend.currentRow()]
     @QtCore.pyqtSlot()  
     def on_pushButtonEnter_clicked(self):
-        self.groupChat = chatWindow.ChatWindow()
+        self.groupChat = chatWindow.ChatWindow(self.hostName,self.chatWindowName,self.socket,1)
         self.groupChat.show()
         #exit()
         #关闭原来的
