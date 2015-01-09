@@ -10,7 +10,7 @@ import os
 import FileTrans
 import sys
 from FileTrans import FileTrans
-from lib2to3.fixer_util import String
+#from lib2to3.fixer_util import String
 from PyQt4 import QtCore, QtGui
 from VideoChat import MediaTrans
 
